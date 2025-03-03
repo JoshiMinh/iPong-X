@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPong X</title>
-    <link rel="icon" type="image/x-icon" href="icon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <style>
         .variations {
             border: 2px solid #ccc;
@@ -22,6 +22,9 @@
             width: 300px;
             height: 450px;
             transition: width 1s, height 1s;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .boxRect:hover {
             width: 320px;
@@ -36,6 +39,8 @@
             position: relative;
             width: 100%;
             padding-top: 56.25%;
+            border-radius: 45px;
+            overflow: hidden;
         }
         .video-container iframe {
             position: absolute;
@@ -50,149 +55,100 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="pear.png" width="15px" />iPong X</a>
+            <a class="navbar-brand" href="#">
+                <img src="pear.png" width="15px" alt="Pear Logo"> iPong X
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#capabilities">Capabilities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#why-better">Why It's Better</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#more-colors">More Colors</a>
-                    </li>
-                    <li class="nav-item"></li>
-                        <a class="nav-link" href="#purchase-now">Purchase Now</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#capabilities">Capabilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-better">Why It's Better</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#more-colors">More Colors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#purchase-now">Purchase Now</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <main>
         <section id="latest-model" class="py-4">
-            <div class="container"></div>
+            <div class="container">
                 <h2>Introducing the iPong X</h2>
                 <p>Totally not a low-quality copy of the iPhone X.</p>
-                <div class="video-container" style="border-radius: 45px; overflow: hidden;"></div>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2-EjP2ctzDI?autoplay=1" title="iPong X Video" allowfullscreen></iframe>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2-EjP2ctzDI?autoplay=1" title="iPong X Video" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
+    
         <section id="capabilities" class="py-5">
             <div class="container">
                 <h2>Capabilities</h2>
                 <p>Here's what it can do.</p>
-                <div class="container row d-flex justify-content-center"></div>
-                    <div class="boxRect position-relative me-2" style="background-image: url('images/Galaxy.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
-                        <div class="content position-absolute bottom-0 start-0 p-3 text-white"></div>
+                <div class="row justify-content-center">
+                    <div class="boxRect position-relative me-2" style="background-image: url('images/Galaxy.jpg');">
+                        <div class="content position-absolute bottom-0 start-0 p-3 text-white">
                             <h3>1000X Camera</h3>
                             <p class="mb-0">Far enough to see the damn Galaxy.</p>
                         </div>
                     </div>
-                    <div class="boxRect position-relative me-2" style="background-image: url('images/Genshin.jpeg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                    <div class="boxRect position-relative me-2" style="background-image: url('images/Genshin.jpeg');">
                         <div class="content position-absolute bottom-0 start-0 p-3 text-white">
                             <h3>Super CPU</h3>
-                            <p class="mb-0">Strong enough to grind Genshin Impact with your fat ass.</p>
+                            <p class="mb-0">Strong enough to grind Genshin Impact.</p>
                         </div>
                     </div>
-                    <div class="boxRect position-relative me-2" style="background-image: url('images/1000mAh.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
-                        <div class="content position-absolute bottom-0 start-0 p-3 text-white"></div>
+                    <div class="boxRect position-relative me-2" style="background-image: url('images/1000mAh.jpg');">
+                        <div class="content position-absolute bottom-0 start-0 p-3 text-white">
                             <h3>10000000mAh Battery</h3>
-                            <p class="mb-0">Last longer than you parents.</p>
+                            <p class="mb-0">Lasts longer than your parents.</p>
                         </div>
                     </div>
-                    <div class="boxRect position-relative" style="background-image: url('images/Plants.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+                    <div class="boxRect position-relative" style="background-image: url('images/Plants.jpg');">
                         <div class="content position-absolute bottom-0 start-0 p-3 text-white">
                             <h3>Biodegradable</h3>
-                            <p class="mb-0">It will explodes in anytime to kill you and save the environment.</p>
+                            <p class="mb-0">Explodes anytime to save the environment.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="why-better" class="pb-5">
-            <div class="container">
-                <h2>Why It's Better</h2>
-                <p>Just take a look at the iPong X specs compared to other phones on the market.</p>
-                <div class="table-responsive">
-                    <table class="table text-center">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th><img src="phone_models/black.png" height="155px" /><br />iPong X</th>
-                                <th><img src="phone_models/15iphone.png" height="155px" /><br />iPhone 15 Pro Max</th>
-                                <th><img src="phone_models/24samsung.png" height="155px" /><br />Samsung Galaxy S24 Ultra</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="icons/cpu.png" width="35px" /></td>
-                                <td>Pong Chip X100</td>
-                                <td>Apple A17 Pro</td>
-                                <td>Snapdragon 8 Gen 3</td>
-                            </tr>
-                            <tr>
-                                <td><img src="icons/ram.png" width="40px" /></td>
-                                <td>512GB</td>
-                                <td>6GB</td>
-                                <td>12GB</td>
-                            </tr>
-                            <tr>
-                                <td><img src="icons/gpu.png" width="40px" /></td>
-                                <td>RTX 4090Ti</td>
-                                <td>Apple GPU</td>
-                                <td>Adreno 750</td>
-                            </tr>
-                            <tr>
-                                <td><img src="icons/screen.png" width="40px" /></td>
-                                <td>6.7" Super XDR</td>
-                                <td>6.7" OLED</td>
-                                <td>6.8" Dynamic AMOLED</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+    
         <section id="more-colors">
             <div class="container">
                 <h2>More <span class="rainbow-text">Colors</span></h2>
-                <div class="row d-flex justify-content-center">
-                    <div class="variations text-center position-relative m-3" style="color: #665e6d;"></div>
-                        <img src="phone_models/black.png" alt="Black iPong X" class="img-fluid mb-3" />
+                <div class="row justify-content-center">
+                    <div class="variations text-center m-3" style="color: #665e6d;">
+                        <img src="phone_models/black.png" alt="Black iPong X" class="img-fluid mb-3">
                         <h3>Black</h3>
-                        <p>For gentlemen who like a gadget that is both good-looking and cool.</p>
+                        <p>For those who prefer elegance and style.</p>
                     </div>
-                    <div class="variations text-center position-relative m-3" style="color: #b1a388;"></div>
-                        <img src="phone_models/white.png" alt="White iPong X" class="img-fluid mb-3" />
+                    <div class="variations text-center m-3" style="color: #b1a388;">
+                        <img src="phone_models/white.png" alt="White iPong X" class="img-fluid mb-3">
                         <h3>White</h3>
-                        <p>For women or people who want the best luxury and technology.</p>
+                        <p>For those who value luxury and technology.</p>
                     </div>
-                    <div class="variations text-center position-relative m-3" style="color: #6b5e8a;"></div>
-                        <img src="phone_models/purple.png" alt="Purple iPong X" class="img-fluid mb-3" />
+                    <div class="variations text-center m-3" style="color: #6b5e8a;">
+                        <img src="phone_models/purple.png" alt="Purple iPong X" class="img-fluid mb-3">
                         <h3>Purple</h3>
-                        <p>For eccentrics who enjoy being mysterious and enchanted.</p>
+                        <p>For those who enjoy mystery and enchantment.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="purchase-now" class="py-5">
-            <div class="container-fluid text-center">
-                <h2>What are you waiting for?</h2>
-                <a href="#" class="btn btn-success my-1">Purchase Now</a>
-                <p>Starting at <b>9999$</b></p>
-            </div>
+    
+        <section id="purchase-now" class="py-5 text-center">
+            <h2>What are you waiting for?</h2>
+            <a href="#" class="btn btn-success my-1">Purchase Now</a>
+            <p>Starting at <b>$9999</b></p>
         </section>
     </main>
-    <footer class="bg-dark text-light p-4">
-        <div class="container text-center">
-            <p>&copy; 2024 iPong & JoshiMinh. All rights reserved.</p>
-            <p class="small text-muted">Apple please don't sue me. I swear this is not an iPhone rip-off.</p>
-        </div>
+    
+    <footer class="bg-dark text-light p-4 text-center">
+        <p>&copy; 2024 iPong & JoshiMinh. All rights reserved.</p>
+        <p class="small text-muted">Apple, please don't sue me. I swear this is not an iPhone rip-off.</p>
     </footer>
 </body>
 </html>

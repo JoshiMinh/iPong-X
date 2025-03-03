@@ -1,13 +1,13 @@
 # iPong X
-Just a static website I made for my school project. Visit [joshiminh.github.io/iPong-X](https://joshiminh.github.io/iPong-X/) for a live demo.
+
+A static website created for a school project. Check out the [joshiminh.github.io/iPong-X](https://joshiminh.github.io/iPong-X/) to see it in action.
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
-- Bootstrap
 
 ## License
 
-This project is copyrighted by me, JoshiMinh, but you are allowed to use it for your own purposes.
+This project is copyrighted by JoshiMinh. You are permitted to use it for your own purposes.
