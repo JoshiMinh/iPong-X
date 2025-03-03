@@ -7,6 +7,7 @@ A static website created for a school project. Check out the [joshiminh.github.i
 - HTML
 - CSS
 - JavaScript
+- **Bootstrap**
 
 ## License
 
