@@ -1,176 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>iPong X</title>
-        <link rel="icon" type="image/x-icon" href="icon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <style>
-            .variations {
-                border: 2px solid #ccc;
-                border-radius: 12px;
-                padding: 10px;
-                width: 400px;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iPong X</title>
+    <meta
+      name="description"
+      content="Meet the suspiciously confident iPong X—overbuilt specs, loud colors, and just enough attitude to irritate actual flagships."
+    />
+    <meta property="og:title" content="iPong X" />
+    <meta
+      property="og:description"
+      content="Meet the suspiciously confident iPong X—overbuilt specs, loud colors, and just enough attitude to irritate actual flagships."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="preview.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="iPong X" />
+    <meta
+      name="twitter:description"
+      content="Meet the suspiciously confident iPong X—overbuilt specs, loud colors, and just enough attitude to irritate actual flagships."
+    />
+    <meta name="twitter:image" content="preview.png" />
+    <meta name="theme-color" content="#3ddc84" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Primary navigation">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="assets/images/branding/pear-logo.png"
+              alt="iPong logo"
+              width="28"
+              height="28"
+              loading="lazy"
+              decoding="async"
+            />
+            iPong X
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#capabilities">Capabilities</a></li>
+              <li class="nav-item"><a class="nav-link" href="#why-better">Why It's Better</a></li>
+              <li class="nav-item"><a class="nav-link" href="#more-colors">More Colors</a></li>
+              <li class="nav-item"><a class="nav-link" href="#purchase-now">Purchase Now</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-            .boxRect {
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 20px;
-                width: 300px;
-                height: 450px;
-                transition: width 1s, height 1s;
-            }
-
-            .boxRect:hover {
-                width: 320px;
-                height: 480px;
-            }
-
-            .rainbow-text {
-                background: linear-gradient(10deg, red, blue);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .video-container {
-                position: relative;
-                width: 100%;
-                padding-top: 56.25%;
-            }
-
-            .video-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="pear.png" width="15" /> iPong X</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#capabilities">Capabilities</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#why-better">Why It's Better</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#more-colors">More Colors</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#purchase-now">Purchase Now</a></li>
-                    </ul>
-                </div>
+    <main>
+      <section id="latest-model" class="hero">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5 mx-auto mx-lg-0 text-center text-lg-start">
+              <header class="hero__header">
+                <p class="eyebrow mb-2">New Release*</p>
+                <h1 class="section-title">Introducing the iPong X</h1>
+              </header>
+              <p class="hero__lead">Absolutely not the suspiciously familiar rectangle you're picturing.</p>
             </div>
-        </nav>
-
-        <main>
-            <section id="latest-model" class="py-4">
-                <div class="container">
-                    <h2>Introducing the iPong X</h2>
-                    <p>Totally not a low-quality copy of the iPhone X.</p>
-                    <div class="video-container" style="border-radius: 45px; overflow: hidden;">
-                        <iframe src="https://www.youtube.com/embed/2-EjP2ctzDI?autoplay=1" title="iPong X Video" allowfullscreen></iframe>
-                    </div>
+            <div class="col-lg-7">
+              <figure class="hero__video" aria-label="Promotional video">
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/2-EjP2ctzDI"
+                    title="iPong X launch video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
                 </div>
-            </section>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section id="capabilities" class="py-5">
-                <div class="container">
-                    <h2>Capabilities</h2>
-                    <p>Here's what it can do.</p>
-                    <div class="row justify-content-center">
-                        <div class="boxRect position-relative me-2" style="background: url('images/Galaxy.jpg') center/contain no-repeat;">
-                            <div class="content position-absolute bottom-0 start-0 p-3 text-white">
-                                <h3>1000X Camera</h3>
-                                <p class="mb-0">Far enough to see the damn Galaxy.</p>
-                            </div>
-                        </div>
-                        <div class="boxRect position-relative me-2" style="background: url('images/Genshin.jpeg') center/contain no-repeat;">
-                            <div class="content position-absolute bottom-0 start-0 p-3 text-white">
-                                <h3>Super CPU</h3>
-                                <p class="mb-0">Strong enough to grind Genshin Impact.</p>
-                            </div>
-                        </div>
-                        <div class="boxRect position-relative me-2" style="background: url('images/1000mAh.jpg') center/contain no-repeat;">
-                            <div class="content position-absolute bottom-0 start-0 p-3 text-white">
-                                <h3>10000000mAh Battery</h3>
-                                <p class="mb-0">Lasts longer than your parents.</p>
-                            </div>
-                        </div>
-                        <div class="boxRect position-relative" style="background: url('images/Plants.jpg') center/contain no-repeat;">
-                            <div class="content position-absolute bottom-0 start-0 p-3 text-white">
-                                <h3>Biodegradable</h3>
-                                <p class="mb-0">Explodes anytime to save the environment.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section id="capabilities" class="capabilities">
+        <div class="container">
+          <header class="section-header text-center">
+            <h2 class="section-title">Capabilities</h2>
+            <p class="section-intro">A parody powerhouse with ridiculous reach and a questionable sense of restraint.</p>
+          </header>
+          <div class="row align-items-stretch gy-4">
+            <div class="col-lg-5">
+              <div class="capabilities__summary">
+                <p>
+                  iPong X stuffs absurd tech into a chassis sized for courtroom exhibits. Every subsystem is tuned for
+                  overkill performance, cinematic flair, and the kind of bravado that keeps competitors awake.
+                </p>
+                <ul class="capabilities__summary-list">
+                  <li>Dual-orbit optics so rivals look like they filmed on security cameras.</li>
+                  <li>Quantum Pong Core with enough muscle to fry benchmarks and egos alike.</li>
+                  <li>Failsafe eco-mode that composts itself before the lawsuit paperwork arrives.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="capability-grid">
+                <article class="capability-card capability-card--camera">
+                  <div class="capability-card__icon" aria-hidden="true">📸</div>
+                  <h3>Cinematic Telescope</h3>
+                  <p>
+                    Stack twelve periscope lenses for intergalactic close-ups while everyone else begs for digital zoom
+                    forgiveness.
+                  </p>
+                </article>
+                <article class="capability-card capability-card--performance">
+                  <div class="capability-card__icon" aria-hidden="true">🚀</div>
+                  <h3>Quantum Pong Core</h3>
+                  <p>
+                    A neural overclock engine that raids, streams, and renders while politely mocking "Pro" chips in the
+                    background.
+                  </p>
+                </article>
+                <article class="capability-card capability-card--battery">
+                  <div class="capability-card__icon" aria-hidden="true">🔋</div>
+                  <h3>Epoch Battery</h3>
+                  <p>
+                    Ten million milliamp-hours of endurance keeps the hype alive for weeks and reverse-charges that other
+                    phone that keeps "optimizing" itself.
+                  </p>
+                </article>
+                <article class="capability-card capability-card--eco">
+                  <div class="capability-card__icon" aria-hidden="true">🌱</div>
+                  <h3>Eco-Drama Mode</h3>
+                  <p>
+                    Smart biodegrading polymers self-compost on command, ensuring the planet survives your upgrade cycle
+                    and the PR fallout.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section id="why-better" class="pb-5">
-                <div class="container">
-                    <h2>Why It's Better</h2>
-                    <p>Compare iPong X specs with other phones.</p>
-                    <div class="table-responsive">
-                        <table class="table text-center">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th><img src="phone_models/black.png" height="155" /><br /> iPong X</th>
-                                    <th><img src="phone_models/15iphone.png" height="155" /><br /> iPhone 15 Pro Max</th>
-                                    <th><img src="phone_models/24samsung.png" height="155" /><br /> Samsung Galaxy S24 Ultra</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td><img src="icons/cpu.png" width="35" /></td><td>Pong Chip X100</td><td>Apple A17 Pro</td><td>Snapdragon 8 Gen 3</td></tr>
-                                <tr><td><img src="icons/ram.png" width="40" /></td><td>512GB</td><td>6GB</td><td>12GB</td></tr>
-                                <tr><td><img src="icons/gpu.png" width="40" /></td><td>RTX 4090Ti</td><td>Apple GPU</td><td>Adreno 750</td></tr>
-                                <tr><td><img src="icons/screen.png" width="40" /></td><td>6.7" Super XDR</td><td>6.7" OLED</td><td>6.8" Dynamic AMOLED</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <section id="more-colors">
-                <div class="container">
-                    <h2>More <span class="rainbow-text">Colors</span></h2>
-                    <div class="row justify-content-center">
-                        <div class="variations text-center m-3" style="color: #665e6d;">
-                            <img src="phone_models/black.png" class="img-fluid mb-3" />
-                            <h3>Black</h3>
-                            <p>For those who like sleek design.</p>
+      <section id="why-better">
+        <div class="container">
+          <header class="section-header text-center">
+            <h2 class="section-title">Why It's Better</h2>
+            <p class="section-intro">Because comparisons are funniest when they're wildly lopsided.</p>
+          </header>
+          <div class="comparison-table">
+            <div class="table-responsive">
+              <table class="comparison-table__table">
+                <caption class="visually-hidden">Specification comparison between the iPong X and leading smartphones</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="comparison-table__spec visually-hidden">Specification</th>
+                    <th scope="col">
+                      <div class="device-card device-card--highlight">
+                        <img
+                          src="assets/images/phones/ipong-x-black.png"
+                          alt="iPong X"
+                          width="120"
+                          height="240"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="device-card__name">iPong X</div>
+                        <span class="device-card__tagline">Lawsuit Bait Deluxe</span>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="device-card">
+                        <img
+                          src="assets/images/phones/iphone-15-pro-max.png"
+                          alt="iPhone 15 Pro Max"
+                          width="120"
+                          height="240"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="device-card__name">iPhone 15 Pro Max</div>
+                        <span class="device-card__tagline">Apple (Actual Lawyers)</span>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="device-card">
+                        <img
+                          src="assets/images/phones/galaxy-s24-ultra.png"
+                          alt="Samsung Galaxy S24 Ultra"
+                          width="120"
+                          height="240"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="device-card__name">Samsung Galaxy S24 Ultra</div>
+                        <span class="device-card__tagline">Samsung (Respectable Adults)</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="spec-label">
+                        <img
+                          src="assets/icons/cpu.png"
+                          width="40"
+                          height="40"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div>
+                          <span class="spec-label__name">Processor</span>
+                          <span class="spec-label__hint">Chipset</span>
                         </div>
-                        <div class="variations text-center m-3" style="color: #b1a388;">
-                            <img src="phone_models/white.png" class="img-fluid mb-3" />
-                            <h3>White</h3>
-                            <p>For those who value luxury.</p>
+                      </div>
+                    </th>
+                    <td>
+                      <div class="spec-value">Pong Chip X100 (runs everything)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">Apple A17 Pro (runs hot)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">Snapdragon 8 Gen 3 (runs meetings)</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="spec-label">
+                        <img
+                          src="assets/icons/ram.png"
+                          width="40"
+                          height="40"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div>
+                          <span class="spec-label__name">Memory</span>
+                          <span class="spec-label__hint">RAM</span>
                         </div>
-                        <div class="variations text-center m-3" style="color: #6b5e8a;">
-                            <img src="phone_models/purple.png" class="img-fluid mb-3" />
-                            <h3>Purple</h3>
-                            <p>For those who enjoy mystery.</p>
+                      </div>
+                    </th>
+                    <td>
+                      <div class="spec-value">512GB (because why not)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">6GB (courage!)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">12GB (corporate approved)</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="spec-label">
+                        <img
+                          src="assets/icons/gpu.png"
+                          width="40"
+                          height="40"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div>
+                          <span class="spec-label__name">Graphics</span>
+                          <span class="spec-label__hint">GPU</span>
                         </div>
-                    </div>
-                </div>
-            </section>
+                      </div>
+                    </th>
+                    <td>
+                      <div class="spec-value">RTX 4090Ti (portable-ish)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">Apple GPU (closed garden)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">Adreno 750 (boardroom safe)</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="spec-label">
+                        <img
+                          src="assets/icons/screen.png"
+                          width="40"
+                          height="40"
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div>
+                          <span class="spec-label__name">Display</span>
+                          <span class="spec-label__hint">Panel</span>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <div class="spec-value">6.7&quot; Super XDR (retina-searing)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">6.7&quot; OLED (very serious)</div>
+                    </td>
+                    <td>
+                      <div class="spec-value">6.8&quot; Dynamic AMOLED (committee approved)</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section id="purchase-now" class="py-5 text-center">
-                <h2>What are you waiting for?</h2>
-                <a href="#" class="btn btn-success my-1">Purchase Now</a>
-                <p>Starting at <b>$9999</b></p>
-            </section>
-        </main>
+      <section id="more-colors">
+        <div class="container">
+          <header class="section-header text-center">
+            <h2 class="section-title">More <span class="rainbow-text">Colors</span></h2>
+            <p class="section-intro">
+              Choose a finish that matches your vibe. No matter the shade, it still out-brags phones with actual
+              reputations.
+            </p>
+          </header>
+          <div class="color-variations">
+            <figure class="color-card color-card--black">
+              <img
+                src="assets/images/phones/ipong-x-black.png"
+                alt="iPong X in black"
+                width="220"
+                height="440"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <h3>Black</h3>
+                <p>For agents of chaos cosplaying minimalists.</p>
+              </figcaption>
+            </figure>
+            <figure class="color-card color-card--white">
+              <img
+                src="assets/images/phones/ipong-x-white.png"
+                alt="iPong X in white"
+                width="220"
+                height="440"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <h3>White</h3>
+                <p>For people who call it "bespoke" while side-eyeing fruit logos.</p>
+              </figcaption>
+            </figure>
+            <figure class="color-card color-card--purple">
+              <img
+                src="assets/images/phones/ipong-x-purple.png"
+                alt="iPong X in purple"
+                width="220"
+                height="440"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <h3>Purple</h3>
+                <p>For drama lovers who narrate unboxings like true crime.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-        <footer class="bg-dark text-light p-4 text-center">
-            <p>&copy; 2024 iPong & JoshiMinh. All rights reserved.</p>
-        </footer>
-    </body>
+      <section id="purchase-now" class="py-0">
+        <div class="container">
+          <div class="cta text-center">
+            <h2 class="section-title text-white">What are you waiting for?</h2>
+            <p class="section-intro text-white">
+              Reserve your iPong X before someone from legal notices the resemblance.
+            </p>
+            <a class="btn btn-lg" href="#">Purchase Now*</a>
+            <p class="mt-3 mb-0">Starting at <strong>$9999</strong> (because nines feel cheaper)</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-md-6 text-md-start text-center">
+            <a class="footer-brand d-inline-flex align-items-center" href="#latest-model">
+              <img
+                src="assets/images/branding/pear-logo.png"
+                alt="iPong logo"
+                width="28"
+                height="28"
+                loading="lazy"
+                decoding="async"
+              />
+              iPong X
+            </a>
+            <p class="site-footer__tagline mb-0">
+              Ridiculously overbuilt, unapologetically pretend. Stream the keynote, then practice your courtroom face.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end text-center">
+            <nav class="site-footer__nav" aria-label="Footer">
+              <a href="#capabilities">Capabilities</a>
+              <a href="#why-better">Specs</a>
+              <a href="#more-colors">Colors</a>
+              <a href="#purchase-now">Buy</a>
+            </nav>
+            <p class="site-footer__legal mb-0">&copy; 2024 iPong &amp; JoshiMinh. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </body>
 </html>
